@@ -1,0 +1,23 @@
+{
+  "name": "projetobackend",
+  "version": "1.0.0",
+  "description": "Projeto de CMS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielfurtadon/ProjetoBackEnd.git"
+  },
+  "author": "Gabriel, Laura, Thiago, João",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabrielfurtadon/ProjetoBackEnd/issues"
+  },
+  "homepage": "https://github.com/gabrielfurtadon/ProjetoBackEnd#readme",
+  "dependencies": {
+    "express": "^4.19.2",
+    "nodemon": "^3.1.0"
+  }
+}
