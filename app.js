@@ -17,21 +17,21 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'mustache');
 
 //Cookies
-const cookieParser = require('cookie-parser');
-app.use(cookieParser());
+// const cookieParser = require('cookie-parser');
+// app.use(cookieParser());
 
-//Sessão
-const session = require("express-session")
-app.use(session({
-  secret: process.env.SECRET,
-  resave: false,
-  saveUninitialized: false
-}));
+// //Sessão
+// const session = require("express-session")
+// app.use(session({
+//   secret: process.env.SECRET,
+//   resave: false,
+//   saveUninitialized: false
+// }));
 
 //Rotas
-const homeRouter = require('./routes/home');
+//const homeRouter = require('./routes/home');
 const loginRouter = require('./routes/login');
-app.use('/', homeRouter);
+//app.use('/', homeRouter);
 app.use('/login', loginRouter);
 
 // error handler
