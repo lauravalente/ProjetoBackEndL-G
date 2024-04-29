@@ -1,0 +1,33 @@
+/* Css padrão para todas as páginas. Cuidado ao alterar para não afetar as demais páginas */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    height: 100%;
+    font-family: sans-serif;
+}
+
+/* 
+Classes de cores padrões do sistema para utilizar estilo Bootstrap
+Se for definir cores que serão utilizadas em outras telas, recomendo colocar aqui :)
+*/
+
+.bg-orange {
+    background-color: #df6903 !important;
+}
+
+.color-orange {
+    color: #df6903 !important;
+}
+
+.bg-white {
+    background-color: #fdf9eb !important;
+}

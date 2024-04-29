@@ -1,0 +1,10 @@
+/* Css para a tela home */
+
+img {
+    margin: -40px
+}
+
+.login-button {
+    color: white !important;
+    width: 120px;
+}
