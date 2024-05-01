@@ -38,6 +38,7 @@ adminModel.addAdministrator(LOGIN, PASSWORD)
 app.use('/', require('./routes/home'));
 app.use('/', require('./routes/login'));
 app.use('/', require('./routes/admin'));
+app.use('/', require('./routes/creation'));
 
 // Middleware para lidar com erros na aplicação
 app.use(function (err, req, res, next) {
