@@ -44,5 +44,5 @@ router.get('/logout', (req, res) => {
     // Redireciona de volta para a página home após o logout
     res.redirect('/')
 })
-
+//removendo commits 
 module.exports = router
