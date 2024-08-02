@@ -22,7 +22,7 @@ router.post('/creation', (req, res) => {
         res.render('template', { title, content });
     });
 
-    // redireciona para /creation com parâmetro de sucesso
+    // redireciona para /creation com parâmetro de sucess
     res.redirect(`/creation?success=true&route=${url}`);
 });
 
