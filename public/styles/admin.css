@@ -1,1 +1,5 @@
 /* Css para a tela de admin */
+.admin-side-header{
+    display: flex;
+    
+}
