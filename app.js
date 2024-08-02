@@ -1,13 +1,26 @@
 // Configuração do path e das variáveis de ambiente
-const path = require("path")
+const path = require("path");
+const expresss = require('express');
 const fs = require('fs');
-require("dotenv").config()
+require("dotenv").config();
+const loadDynamicRoutes = require('./models/DynamicRoutes'); // Importa a função
+const server = expresss();
+
+server.use(expresss.json());
+server.use(expresss.urlencoded({ extended: false }));
+server.use(expresss.static(path.join(__dirname, 'public')));
+
+server.on('ready', () => {
+  loadDynamicRoutes(server);
+});
 
 // Caminho para o arquivo pages.json
 const pagesFilePath = path.join(__dirname, 'pages.json');
 
 // Limpar o conteúdo de pages.json ao iniciar a aplicação
 fs.writeFileSync(pagesFilePath, JSON.stringify([], null, 2));
+
+
 
 // Importações e configurações do Express
 const express = require('express');

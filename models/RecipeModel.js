@@ -28,8 +28,13 @@ function addRecipe(recipe) {
     fs.writeFileSync(recipesFilePath, JSON.stringify(recipes, null, 2));
 }
 
+function saveRecipes(recipes) {
+    fs.writeFileSync(recipesFilePath, JSON.stringify(recipes, null, 2));
+}
+
 
 module.exports = {
     getAllRecipes,
-    addRecipe
+    addRecipe,
+    saveRecipes
 };
