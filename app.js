@@ -1,6 +1,13 @@
 // Configuração do path e das variáveis de ambiente
 const path = require("path")
+const fs = require('fs');
 require("dotenv").config()
+
+// Caminho para o arquivo pages.json
+const pagesFilePath = path.join(__dirname, 'pages.json');
+
+// Limpar o conteúdo de pages.json ao iniciar a aplicação
+fs.writeFileSync(pagesFilePath, JSON.stringify([], null, 2));
 
 // Importações e configurações do Express
 const express = require('express');
@@ -48,4 +55,4 @@ app.use(function (err, req, res, next) {
   res.render('error');
 });
 
-module.exports = app;
+module.exports = app;

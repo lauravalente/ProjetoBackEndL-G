@@ -32,35 +32,15 @@
         <p>Seu site preferido para receitas!</p>
     </div>
     <!-- Seção de receitas -->
-    <section class="mt-5 p-4 bg-orange d-flex justify-content-around">
-        <!-- Card de receita 1 -->
-        <div class="card bg-white" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">Receita 1</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Bolo de cenoura</h6>
-                <p class="card-text">3 copos de cenoura, ovo e leite.</p>
-                <a href="#" class="card-link">link da receita</a>
-            </div>
+    <section style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5em;">
+        {{#recipes}}
+        <div style="background-color: white; padding: 1em; border-radius: 8px; margin: 0.5em; width: 200px; height: 100px; display: flex; flex-direction: column; justify-content: space-between;">
+            <h5>{{title}}</h5>
+            <a href="{{url}}" style="align-self: flex-start;">Visitar Página</a>
         </div>
-        <!-- Card de receita 2 -->
-        <div class="card bg-white" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">Receita 2</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Bolo de chocolate</h6>
-                <p class="card-text">3 copos de chocolate, ovo e leite.</p>
-                <a href="#" class="card-link">link da receita</a>
-            </div>
-        </div>
-        <!-- Card de receita 3 -->
-        <div class="card bg-white" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">Receita 3</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Bolo de morango</h6>
-                <p class="card-text">3 copos de morango, ovo e leite.</p>
-                <a href="#" class="card-link">link da receita</a>
-            </div>
-        </div>
+        {{/recipes}}
     </section>
+
 </body>
 
 </html>
