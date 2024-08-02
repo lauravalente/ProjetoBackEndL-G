@@ -1,8 +1,16 @@
+<div class="header d-flex justify-content-end p-3">
+    {{#isLoggedIn}}
+    <a href="/logout" class="btn login-button bg-red">Sair</a>
+    {{/isLoggedIn}}
+    {{^isLoggedIn}}
+    <a href="/login" class="btn login-button bg-orange">Login</a>
+    {{/isLoggedIn}}
+</div>
 <!DOCTYPE html>
 <html lang="en">
 
 <!-- 
-Aqui precisa mudar bastante coisa, fiz apenas um modelo para facilidar
+Aqui precisa mudar bastante coisa, fiz apenas um modelo para facilitar
 TO-DO
 - Melhorar aparência da página
 - Pensar em uma forma de renderizar os sites
@@ -24,9 +32,6 @@ TO-DO
 
 <body class="bg-white">
     <!-- Cabeçalho com botão de login -->
-    <header class="p-3 d-flex justify-content-end">
-        <a href="/login" class="btn login-button bg-orange">Login</a>
-    </header>
     <!-- Texto de boas vindas -->
     <div class="text-center">
         <!-- Logo e título -->
